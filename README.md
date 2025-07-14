@@ -70,5 +70,8 @@ pip install -r requirements.txt
 > *   `CogVideoX-Flash`: 默认模型，生成速度更快，但不支持 `quality`, `size`, 和 `fps` 参数的自定义。
 > *   `CogVideoX`: 支持更丰富的自定义参数，可以生成更高质量和分辨率的视频。
 
+bigModeal:
+邀请链接：我正在BigModel.cn上用智谱API打造新一代应用服务，通过我的专属邀请链接注册即可获得额外GLM-4-Air 2000万Tokens好友专属福利，期待和你一起在BigModel上探索AGI时代的应用；链接：[https://www.bigmodel.cn/invite?icode=bVBNmTWX2BjIlSYGraFiJXHEaazDlIZGj9HxftzTbt4%3D](https://www.bigmodel.cn/invite?icode=bVBNmTWX2BjIlSYGraFiJXHEaazDlIZGj9HxftzTbt4%3D) 
+
 请他喝杯茶吧：
 ![alt text](image.png)

@@ -1,0 +1,30 @@
+identity:
+  name: dify-big-model-video-generate
+  author: lininn
+  label:
+    en_US: dify-big-model-video-generate
+    zh_Hans: dify-big-model-video-generate
+    pt_BR: dify-big-model-video-generate
+description:
+  human:
+    en_US: dify-big-model-video-generate
+    zh_Hans: dify-big-model-video-generate
+    pt_BR: dify-big-model-video-generate
+  llm: dify-big-model-video-generate
+parameters:
+  - name: query
+    type: string
+    required: true
+    label:
+      en_US: Query string
+      zh_Hans: 查询语句
+      pt_BR: Query string
+    human_description:
+      en_US: dify-big-model-video-generate
+      zh_Hans: dify-big-model-video-generate
+      pt_BR: dify-big-model-video-generate
+    llm_description: dify-big-model-video-generate
+    form: llm
+extra:
+  python:
+    source: tools/big-video.py

@@ -1,0 +1,143 @@
+description:
+  human:
+    en_US: Generate videos from an image using BigModel CogVideoX.
+    zh_CN: 使用 BigModel CogVideoX 从图片生成视频。
+  llm: "This tool generates a video based on an image and an optional text prompt using the BigModel CogVideoX API. Note: The default model is CogVideoX-Flash, which does not support quality, size, and fps settings."
+extra:
+  python:
+    source: tools/image2video.py
+identity:
+  author: lininn
+  icon: icon.svg
+  label:
+    en_US: Image to Video
+    zh_CN: 图生视频
+  name: image2video
+parameters:
+- form: llm
+  human_description:
+    en_US: The image to generate the video from.
+    zh_CN: 用于生成视频的图片。
+  label:
+    en_US: Image
+    zh_CN: 图片
+  llm_description: The source image for video generation.
+  name: image
+  required: true
+  type: file
+- form: llm
+  human_description:
+    en_US: An optional text prompt to guide the video generation.
+    zh_CN: 用于指导视频生成的可选文本提示。
+  label:
+    en_US: Prompt
+    zh_CN: 提示词
+  llm_description: The optional prompt for video generation.
+  name: prompt
+  required: false
+  type: string
+- form: form
+  human_description:
+    en_US: The model to use for video generation. Defaults to `CogVideoX-Flash`. Other models like `CogVideoX` might be available.
+    zh_CN: 用于视频生成的模型。默认为 `CogVideoX-Flash`。也可能支持 `CogVideoX` 等其他模型。
+  label:
+    en_US: Model
+    zh_CN: 模型
+  name: model
+  required: false
+  type: string
+  default: CogVideoX-Flash
+- form: form
+  human_description:
+    en_US: 'Output mode, defaults to "speed". "quality" for higher quality, "speed" for faster generation. Note: Only supported by CogVideoX model.'
+    zh_CN: '输出模式，默认为 "speed"。 "quality"：质量优先，生成质量高。 "speed"：速度优先，生成时间更快。注意：仅 CogVideoX 模型支持此参数。'
+  label:
+    en_US: Quality
+    zh_CN: 质量
+  name: quality
+  options:
+  - label:
+      en_US: Speed
+      zh_CN: 速度优先
+    value: speed
+  - label:
+      en_US: Quality
+      zh_CN: 质量优先
+    value: quality
+  required: false
+  type: select
+  default: speed
+- form: form
+  human_description:
+    en_US: 'Whether to generate AI sound effects. Default is False.'
+    zh_CN: '是否生成 AI 音效。默认值：False（不生成音效）。'
+  label:
+    en_US: With Audio
+    zh_CN: 生成音效
+  name: with_audio
+  required: false
+  type: boolean
+  default: false
+- form: form
+  human_description:
+    en_US: 'Video resolution. Default is 1080p on the short side. Max 4K. Note: Only supported by CogVideoX model.'
+    zh_CN: '视频分辨率。默认短边为 1080，最高支持 4K。注意：仅 CogVideoX 模型支持此参数。'
+  label:
+    en_US: Size
+    zh_CN: 分辨率
+  name: size
+  options:
+  - label:
+      en_US: "720x480"
+      zh_CN: "720x480"
+    value: "720x480"
+  - label:
+      en_US: "1024x1024"
+      zh_CN: "1024x1024"
+    value: "1024x1024"
+  - label:
+      en_US: "1280x960"
+      zh_CN: "1280x960"
+    value: "1280x960"
+  - label:
+      en_US: "960x1280"
+      zh_CN: "960x1280"
+    value: "960x1280"
+  - label:
+      en_US: "1920x1080"
+      zh_CN: "1920x1080"
+    value: "1920x1080"
+  - label:
+      en_US: "1080x1920"
+      zh_CN: "1080x1920"
+    value: "1080x1920"
+  - label:
+      en_US: "2048x1080"
+      zh_CN: "2048x1080"
+    value: "2048x1080"
+  - label:
+      en_US: "3840x2160"
+      zh_CN: "3840x2160"
+    value: "3840x2160"
+  required: false
+  type: select
+- form: form
+  human_description:
+    en_US: 'Video frame rate (FPS). Options are 30 or 60. Default is 30. Note: Only supported by CogVideoX model.'
+    zh_CN: '视频帧率（FPS），可选值为 30 或 60。默认值：30。注意：仅 CogVideoX 模型支持此参数。'
+  label:
+    en_US: FPS
+    zh_CN: 帧率
+  name: fps
+  options:
+  - label:
+      en_US: "30"
+      zh_CN: "30"
+    value: 30
+  - label:
+      en_US: "60"
+      zh_CN: "60"
+    value: 60
+  required: false
+  type: select
+  default: 30

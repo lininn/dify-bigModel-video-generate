@@ -69,3 +69,6 @@ pip install -r requirements.txt
 > **模型说明**:
 > *   `CogVideoX-Flash`: 默认模型，生成速度更快，但不支持 `quality`, `size`, 和 `fps` 参数的自定义。
 > *   `CogVideoX`: 支持更丰富的自定义参数，可以生成更高质量和分辨率的视频。
+
+请他喝杯茶吧：
+![alt text](image.png)

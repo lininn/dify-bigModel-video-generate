@@ -2,7 +2,7 @@ description:
   human:
     en_US: Generate videos from text using BigModel CogVideoX.
     zh_CN: 使用 BigModel CogVideoX 从文本生成视频。
-  llm: "This tool generates a video based on a text prompt using the BigModel CogVideoX API. Note: The default model is CogVideoX-Flash, which does not support quality, size, and fps settings."
+  llm: "This tool generates a video based on a text prompt using the BigModel CogVideoX API. Note: The default model is cogvideox-flash, which does not support quality, size, and fps settings."
 extra:
   python:
     source: tools/text2video.py
@@ -27,19 +27,19 @@ parameters:
   type: string
 - form: form
   human_description:
-    en_US: The model to use for video generation. Defaults to `CogVideoX-Flash`. Other models like `CogVideoX` might be available.
-    zh_CN: 用于视频生成的模型。默认为 `CogVideoX-Flash`。也可能支持 `CogVideoX` 等其他模型。
+    en_US: The model to use for video generation. Defaults to cogvideox-flash. Other models like cogvideox might be available.
+    zh_CN: 用于视频生成的模型。默认为 cogvideox-flash。也可能支持 cogvideox 等其他模型。
   label:
     en_US: Model
     zh_CN: 模型
   name: model
   required: false
   type: string
-  default: CogVideoX-Flash
+  default: cogvideox-flash
 - form: form
   human_description:
     en_US: 'Output mode, defaults to "speed". "quality" for higher quality, "speed" for faster generation. Note: Only supported by CogVideoX model.'
-    zh_CN: '输出模式，默认为 "speed"。 "quality"：质量优先，生成质量高。 "speed"：速度优先，生成时间更快。注意：仅 CogVideoX 模型支持此参数。'
+    zh_CN: '输出模式，默认为 "speed"。 "quality"：质量优先，生成质量高。 "speed"：速度优先，生成时间更快。注意：仅 cogvideox 模型支持此参数。'
   label:
     en_US: Quality
     zh_CN: 质量
@@ -70,7 +70,7 @@ parameters:
 - form: form
   human_description:
     en_US: 'Video resolution. Default is 1080p on the short side. Max 4K. Note: Only supported by CogVideoX model.'
-    zh_CN: '视频分辨率。默认短边为 1080，最高支持 4K。注意：仅 CogVideoX 模型支持此参数。'
+    zh_CN: '视频分辨率。默认短边为 1080，最高支持 4K。注意：仅 cogvideox 模型支持此参数。'
   label:
     en_US: Size
     zh_CN: 分辨率
@@ -113,7 +113,7 @@ parameters:
 - form: form
   human_description:
     en_US: 'Video frame rate (FPS). Options are 30 or 60. Default is 30. Note: Only supported by CogVideoX model.'
-    zh_CN: '视频帧率（FPS），可选值为 30 或 60。默认值：30。注意：仅 CogVideoX 模型支持此参数。'
+    zh_CN: '视频帧率（FPS），可选值为 30 或 60。默认值：30。注意：仅 cogvideox 模型支持此参数。'
   label:
     en_US: FPS
     zh_CN: 帧率

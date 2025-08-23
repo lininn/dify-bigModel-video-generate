@@ -83,6 +83,7 @@ class Text2VideoTool(Tool):
             "with_audio": tool_parameters.get("with_audio"),
             "size": tool_parameters.get("size"),
             "fps": tool_parameters.get("fps"),
+            "duration": tool_parameters.get("duration"),
         }
         # Remove None values
         payload = {k: v for k, v in payload.items() if v is not None}

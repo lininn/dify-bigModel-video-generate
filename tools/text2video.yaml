@@ -130,3 +130,23 @@ parameters:
   required: false
   type: select
   default: 30
+- form: form
+  human_description:
+    en_US: 'Video duration in seconds. Options are 5 or 10. Default is 5.'
+    zh_CN: '视频持续时长（秒）。可选值为 5 或 10。默认值：5。'
+  label:
+    en_US: Duration
+    zh_CN: 视频时长
+  name: duration
+  options:
+  - label:
+      en_US: "5s"
+      zh_CN: "5秒"
+    value: 5
+  - label:
+      en_US: "10s"
+      zh_CN: "10秒"
+    value: 10
+  required: false
+  type: select
+  default: 5
